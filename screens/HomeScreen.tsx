@@ -71,7 +71,7 @@ const popularItems = [
     image:
       "https://res.cloudinary.com/db1ccefar/image/upload/v1753859289/skirt3_oanqxj.png",
     itemName: "Floral Skirt",
-  }
+  },
 ];
 
 const initialStories = [
@@ -100,7 +100,6 @@ const initialStories = [
     viewed: false,
   },
 ];
-
 
 const generateDates = () => {
   const today = moment().startOf("day");
@@ -186,6 +185,12 @@ const HomeScreen = () => {
             return (
               <View key={index} className="mr-4 ">
                 <Pressable
+                  onPress={() =>
+                    navigation.navigate("AddOutfit", {
+                      date: date.label,
+                      savedOutfits,
+                    })
+                  }
                   key={index}
                   className={`w-24 h-40 rounded-xl justify-center overflow-hidden items-center shadow-md ${outfit ? "bg-white" : "bg-gray-50"}`}
                 >
@@ -195,6 +200,9 @@ const HomeScreen = () => {
                     </View>
                   )}
                 </Pressable>
+                <Text className="text-gray-700 text-xs mt-1 text-center">
+                  {date.label}
+                </Text>
               </View>
             );
           })}
