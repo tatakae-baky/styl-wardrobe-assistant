@@ -45,6 +45,17 @@ const AddOutfitScreen = () => {
     );
   };
 
+  const handleNext = () => {
+    const selectedItems = popularClothes.filter((item) =>
+      selectedItem.includes(item.id)
+    );
+    navigation.navigate("DesignRoom", {
+      selectedItems,
+      date,
+      savedOutfits,
+    });
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header Section */}
@@ -124,7 +135,7 @@ const AddOutfitScreen = () => {
               );
             })}
           </ScrollView>
-          <TouchableOpacity className="bg-black w-24 py-3 rounded-lg items-center self-end mt-3 mb-3">
+          <TouchableOpacity onPress={handleNext} className="bg-black w-24 py-3 rounded-lg items-center self-end mt-3 mb-3">
             <Text className="text-white font-semibold">Next</Text>
           </TouchableOpacity>
         </View>
