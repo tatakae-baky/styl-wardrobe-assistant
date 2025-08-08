@@ -132,8 +132,18 @@ const HomeScreen = () => {
         <View className="flex-row items-center justify-between px-4 pt-4">
           <Text className="text-3xl font-bold">Fits</Text>
           <View className="flex-row items-center gap-4">
-            <TouchableOpacity className="bg-black rounded-full px-4 py-1">
-              <Text className="text-white text-sm font-semibold">Upgrade</Text>
+            <TouchableOpacity className="rounded-full ">
+              <Text
+                style={{
+                  backgroundColor: "#4F46E5",
+                  paddingHorizontal: 10,
+                  paddingVertical: 4,
+                  borderRadius: 15,
+                }}
+                className="text-white text-sm font-semibold"
+              >
+                Upgrade
+              </Text>
             </TouchableOpacity>
             <Ionicons name="notifications-outline" size={24} color={"black"} />
             <Ionicons name="search-outline" size={24} color={"black"} />

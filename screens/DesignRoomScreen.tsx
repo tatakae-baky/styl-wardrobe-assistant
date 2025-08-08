@@ -375,11 +375,6 @@ const DesignRoomScreen = () => {
                     paddingHorizontal: 32,
                     paddingVertical: 12,
                     borderRadius: 25,
-                    elevation: 3,
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
                 }}
             >
                 <Text style={{color: 'white', fontSize: 18, fontWeight: '500'}}>Next</Text>

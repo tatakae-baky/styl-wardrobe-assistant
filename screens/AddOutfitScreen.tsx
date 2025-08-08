@@ -135,8 +135,19 @@ const AddOutfitScreen = () => {
               );
             })}
           </ScrollView>
-          <TouchableOpacity onPress={handleNext} className="bg-black w-24 py-3 rounded-lg items-center self-end mt-3 mb-3">
-            <Text className="text-white font-semibold">Next</Text>
+          <TouchableOpacity
+            onPress={handleNext}
+            className="rounded-lg items-center self-end mt-3 mb-3"
+            style={{
+              backgroundColor: "#4F46E5",
+              paddingHorizontal: 32,
+              paddingVertical: 12,
+              borderRadius: 25,
+            }}
+          >
+            <Text style={{ color: "white", fontSize: 18, fontWeight: "500" }}>
+              Next
+            </Text>
           </TouchableOpacity>
         </View>
       )}
