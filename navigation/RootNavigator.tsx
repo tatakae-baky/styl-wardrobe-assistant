@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TabNavigator } from "./TabNavigator";
 import AddOutfitScreen from "../screens/AddOutfitScreen";
 import DesignRoomScreen from "../screens/DesignRoomScreen";
+import NewOutfitScreen from "../screens/NewOutfitScreen";
 
 const RootNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -12,6 +13,7 @@ const RootNavigator = () => {
       <Stack.Screen name="Tabs" component={TabNavigator} />
       <Stack.Screen name="AddOutfit" component={AddOutfitScreen} />
       <Stack.Screen name="DesignRoom" component={DesignRoomScreen} />
+      <Stack.Screen name="NewOutfit" component={NewOutfitScreen} />
     </Stack.Navigator>
   );
 };
