@@ -229,6 +229,10 @@ const HomeScreen = () => {
               }}
               key={index}
               className="mb-4 w-[48%] h-36 rounded-2xl overflow-hidden shadow-md"
+              onPress={() => {
+                console.log(`🔥 NAVIGATING TO: ${feature.screen}`);
+                navigation.navigate(feature.screen as never);
+              }}
             >
               <View className="p-3">
                 <Text className="text-[16px] font-bold mt-2 text-gray-800">

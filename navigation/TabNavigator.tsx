@@ -2,8 +2,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
-import ProfileScreen from "../screens/ProfileScreen";
 import { Ionicons } from "@expo/vector-icons";
+import ProfileScreen from "../screens/ProfileScreen";
 
 export const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
@@ -11,9 +11,9 @@ export const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
+        tabBarShowLabel: false,
         tabBarActiveTintColor: "#000",
         tabBarInactiveTintColor: "#D3D3D3",
-        tabBarShowLabel: false,
         tabBarStyle: {
           backgroundColor: "#fff",
           height: 70,
@@ -31,6 +31,7 @@ export const TabNavigator = () => {
           ),
         }}
       />
+
       <Tab.Screen
         name="Add"
         component={View}
@@ -48,6 +49,7 @@ export const TabNavigator = () => {
           ),
         }}
       />
+
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
@@ -60,6 +62,7 @@ export const TabNavigator = () => {
     </Tab.Navigator>
   );
 };
+
 
 
 const styles = StyleSheet.create({});
